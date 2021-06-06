@@ -42,4 +42,4 @@ jobs:
         
       - name: Deploying on surge
    
-        run: surge ./build http://firstreactapp.wajid.surge.sh/ --token ${{secrets.FIRST_SURGE_TOKEN }}
+        run: surge ./build http://mine-firstreactapp.wajid.surge.sh/ --token ${{secrets.FIRST_SURGE_TOKEN }}

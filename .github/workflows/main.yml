@@ -29,17 +29,18 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           version: 12
-      - name: github action for yarn
-        uses: borales/actions-yarn@v2.1.0
+      
+      - uses: borales/actions-yarn@v2.1.0
         with:
             # yarn command
            cmd: install  # npm install/ yarn install
-      - name: creating build
+           
+      - name: build React app
         run: yarn build 
          
-      - name: installing surge
+      - name: install surge
         run: npm install -g surge
         
-      - name: Deploying on surge
+      - name: Deploying to surge
    
-        run: surge ./build http://mine-firstreactapp.wajid.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./build mine-firstreactapp.wajid.surge.sh/ --token ${{secrets.SURGE_TOKEN}}

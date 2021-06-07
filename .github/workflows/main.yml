@@ -38,9 +38,8 @@ jobs:
         run: yarn build 
          
       - name: installing surge
-        run: npm install -g surge  
-      
+        run: npm install -g surge
         
       - name: Deploying on surge
    
-        run: surge ./build http://mine-firstreactapp.wajid.surge.sh/ --token ${{secrets.FIRST_SURGE_TOKEN }}
+        run: surge ./build http://mine-firstreactapp.wajid.surge.sh/ --token ${{secrets.SURGE_TOKEN}}

@@ -43,4 +43,4 @@ jobs:
         
       - name: Deploying to surge
    
-        run: surge ./build mine-firstreactapp.wajid.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./build mine-firstreactapp-wajid-surge.sh/ --token ${{secrets.SURGE_TOKEN}}
